@@ -1,10 +1,12 @@
 ﻿
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjetoModeloDDD.Domain.Entities
 {
     public class Cliente
     {
+        [Key]
         public int ClientId { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
@@ -13,6 +15,7 @@ namespace ProjetoModeloDDD.Domain.Entities
         public bool Ativo { get; set; }
 
         public bool ClienteEspecial(Cliente cliente) {
+
             return cliente.Ativo && DateTime.Now.Year - cliente.DataCadastro.Year >= 5;
         }
     }
