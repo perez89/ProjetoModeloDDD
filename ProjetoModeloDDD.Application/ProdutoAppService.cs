@@ -6,7 +6,7 @@ using ProjetoModeloDDD.Domain.Interfaces.Services;
 
 namespace ProjetoModeloDDD.Application
 {
-    class ProdutoAppService : AppServiceBase<Produto>, IProdutoAppService
+    public class ProdutoAppService : AppServiceBase<Produto>, IProdutoAppService
     {
         private readonly IProdutoService _produtoService;
 

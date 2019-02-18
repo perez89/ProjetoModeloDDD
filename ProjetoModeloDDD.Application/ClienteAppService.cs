@@ -6,7 +6,7 @@ using ProjetoModeloDDD.Domain.Interfaces.Services;
 
 namespace ProjetoModeloDDD.Application
 {
-    class ClienteAppService : AppServiceBase<Cliente>, IClienteAppService
+    public class ClienteAppService : AppServiceBase<Cliente>, IClienteAppService
     {
         private readonly IClienteService _clienteService;
 
